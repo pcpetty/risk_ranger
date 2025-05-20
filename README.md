@@ -141,43 +141,44 @@ I’m eager to bring this level of dedication, innovation, and problem-solving t
 
 Let’s build something great together!
 
-
-# Project Structure
-risk_ranger/                 # Parent folder / directory
-├── app.py                   # Main entry point
-├── pages/                   # Individual page modules
-│   ├── login.py             # Login logic
-│   ├── admin.py             # Admin dashboard
-│   ├── home.py              # Landing page
-│   ├── accident_reports.py  # Accident report form
-│   ├── driver_lookup.py     # Driver lookup
-│   ├── vehicle_lookup.py    # Vehicle lookup
-│   ├── flt_lookup.py        # FLT lookup
-│   ├── upload_photos.py     # Upload photo functionality
-│   ├── tutorial.py          # Accident reporting tutorial
-│   ├── safety_generalist.py # Safety Generalist dashboard
-│   └── liability_adjuster.py# Liability Adjuster dashboard
-├── utils/                   # Utility functions
-│   ├── database.py          # All database-related logic
-│   ├── pdf_generator.py     # PDF generation
-│   ├── session_state.py     # Session state logic
-│   ├── accident_helpers.py  # Accident report helpers
-│   └── helpers.py           # General helper functions
-├── static/                  # Static files (e.g., images, CSS)
-│   └── uploads/             # Handles photo uploads to website and psql database
-├── templates/               # PDF templates or HTML templates
-├── README.md                # Documentation
-├── .env                     # Database environment variables
-├── .gitignore               # Gitignore for venv
-├── requirements.txt         # Required libraries and modules
-├── LICENSE.md               # Licensing and use
-└── SECURITY.md              # Security guidelines
-
-    Core Functions:
+    ```bash
+    # Project Structure
+    risk_ranger/                 # Parent folder / directory
+    ├── app.py                   # Main entry point
+    ├── pages/                   # Individual page modules
+    │   ├── login.py             # Login logic
+    │   ├── admin.py             # Admin dashboard
+    │   ├── home.py              # Landing page
+    │   ├── accident_reports.py  # Accident report form
+    │   ├── driver_lookup.py     # Driver lookup
+    │   ├── vehicle_lookup.py    # Vehicle lookup
+    │   ├── flt_lookup.py        # FLT lookup
+    │   ├── upload_photos.py     # Upload photo functionality
+    │   ├── tutorial.py          # Accident reporting tutorial
+    │   ├── safety_generalist.py # Safety Generalist dashboard
+    │   └── liability_adjuster.py# Liability Adjuster dashboard
+    ├── utils/                   # Utility functions
+    │   ├── database.py          # All database-related logic
+    │   ├── pdf_generator.py     # PDF generation
+    │   ├── session_state.py     # Session state logic
+    │   ├── accident_helpers.py  # Accident report helpers
+    │   └── helpers.py           # General helper functions
+    ├── static/                  # Static files (e.g., images, CSS)
+    │   └── uploads/             # Handles photo uploads to website and psql database
+    ├── templates/               # PDF templates or HTML templates
+    ├── README.md                # Documentation
+    ├── .env                     # Database environment variables
+    ├── .gitignore               # Gitignore for venv
+    ├── requirements.txt         # Required libraries and modules
+    ├── LICENSE.md               # Licensing and use
+    └── SECURITY.md              # Security guidelines
+    ```
+    
+  Core Functions:
         - Database connections and queries (e.g., db_connect, fetch_data, save_data, get_or_create_driver).
         - Authentication (e.g., authenticate_user, add_user).
 
-    Page-Specific Features:
+  Page-Specific Features:
         - Accident Report Form (accident_form, get_company_info, get_driver, etc.).
         - Home page (landing and welcome)
         - Login page (login / create profile)
@@ -187,14 +188,14 @@ risk_ranger/                 # Parent folder / directory
         - Vehicle Lookup (vehicle_lookup).
         - FLT Lookup (flt_lookup).
 
-    Shared Utilities
+  Shared Utilities
         Input helpers (text_input_with_default, get_yes_no).
         Logging (log_all_keys).
         Tutorial steps.
         Session state
         PDF generation
 
-    UI Components
+   UI Components
         Navigation (sidebar and top-level navigation).
         Page templates (e.g., logo, footer).
         Modular forms (e.g., load_information, get_tow_information, etc.).
@@ -203,28 +204,30 @@ risk_ranger/                 # Parent folder / directory
 
 This will be the central point of execution, responsible for:
 
-    Initializing Streamlit.
-    Rendering the sidebar navigation.
-    Routing to different pages.
+  Initializing Streamlit.
+  Rendering the sidebar navigation.
+  Routing to different pages.
 
 2. Page-Specific Modules (pages/)
 
 Each page (e.g., Accident Report, Driver Lookup, etc.) will have its own file under the pages/ directory. For example:
 
-    pages/accident_reports.py for accident-related functionalities.
-    pages/driver_lookup.py for driver lookup.
-    pages/tutorial.py for the tutorial page.
+   pages/accident_reports.py for accident-related functionalities.
+   pages/driver_lookup.py for driver lookup.
+   pages/tutorial.py for the tutorial page.
 
 3. Database Operations Module (utils/db.py)
 
 Centralized database-related operations like db_connect, fetch_data, save_data.
+
 4. Utility Module (utils/helpers.py)
 
 For shared helper functions like text_input_with_default, get_yes_no, log_all_keys.
+
 5. Assets and Static Files
 
-    Images, logos, and other assets in a directory like assets/.
-    Templates for PDF reports, if needed.
+  Images, logos, and other assets in a directory like assets/.
+  Templates for PDF reports, if needed.
 
 6. Session State Management
 
